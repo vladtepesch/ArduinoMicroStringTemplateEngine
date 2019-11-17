@@ -59,13 +59,13 @@ class TemplatePrinter
 {
 public:
   /** 
-   *  Prints the i_template string (RAM) to pr and replaces occurences of "%0" - "%9" by thy strings from the i_values table.
+   *  Prints the i_template string (RAM) to pr and replaces occurences of "%0" - "%9" by the strings from the i_values table.
    *  '%' signs can be excaped by "%%" but will printed on there own if the second character is not a digit
    */
   static void printTo(Print& pr, const char* i_template, const char* i_values[]);
 
   /**
-   *  Prints the i_template string (FLASH) to pr and replaces occurences of "%0" - "%9" by thy strings from the i_values table.
+   *  Prints the i_template string (FLASH) to pr and replaces occurences of "%0" - "%9" by the strings from the i_values table.
    *  '%' signs can be excaped by "%%" but will printed on there own if the second character is not a digit
    */
   static void printTo(Print& pr, const __FlashStringHelper* i_template, const char* i_values[]);
