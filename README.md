@@ -35,7 +35,7 @@ a single `'%'` is printed.
 Instead of creating a String with concatination (or '+') that results in many 
 temporary objects write a template string and use this class:
 
-
+```Cpp
     String name ("Dave");
     String game ("TicTacToe");
     
@@ -57,7 +57,7 @@ temporary objects write a template string and use this class:
     // (3) output to serial - same as above but uses a pointer to a FLASH string literal
     static const char PROGMEM s_greeting[] = R"(Hello, %0. I want to play a game. Would you like to play "%1" with me?)";
     TemplatePrinter::printTo(Serial, FPSTR(s_greeting), values);
-
+```
 
 The above second method also makes it more easy to put whole strings into flash (see 3rd variant);
 
@@ -68,7 +68,7 @@ On Arduino ESP8266 Core it seems not to work with the `Print::printf` functions
 ## Limitations
 
  - currently only `char*` values are supported by the API
- - currently only tested on Arduino ESP8266 Core
+ - currently only tested on Arduino ESP8266 Core (but at least compiles for AVR)
 
 [majen1]: https://hackingmajenkoblog.wordpress.com/2016/02/04/the-evils-of-arduino-strings/
 
