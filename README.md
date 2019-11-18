@@ -30,7 +30,7 @@ The `"%0"` to `"%9"` are the placeholder for the runtime supplied values.
 If the character after the `'%'` sign is no decimal digit or another  `'%'` then just 
 a single `'%'` is printed.
 
-##Example
+## Example
 
 Instead of creating a String with concatination (or '+') that results in many 
 temporary objects write a template string and use this class:
